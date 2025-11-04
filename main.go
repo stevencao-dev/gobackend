@@ -3,17 +3,19 @@ package main
 import (
 	"log"
 	"net/http"
+
+	"github.com/rs/cors"
 	"github.com/stevencao-dev/indie-store-backend/internal/handlers"
 )
 
 func main() {
-	http.HandleFunc("/products", handlers.GetProducts)
 
-	log.Println("Backend running on :8080")
+	mux := http.NewServeMux()
+	mux.HandleFunc("/products", handlers.GetProducts)
 
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		log.Fatalf("Server failed to start: %s", err)
-	}
+    handler := cors.AllowAll().Handler(mux)
+
+    log.Println("Backend running on :8080")
+    log.Fatal(http.ListenAndServe(":8080", handler))
 }
 	
