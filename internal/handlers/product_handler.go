@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/stevencao-dev/gobackend/internal/models"
+	"github.com/stevencao-dev/indie-store-backend/internal/models"
 )
 
 // Dummy Data for testing ppurposes

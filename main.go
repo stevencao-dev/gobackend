@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"github.com/stevencao-dev/gobackend/internal/handlers"
+	"github.com/stevencao-dev/indie-store-backend/internal/handlers"
 )
 
 func main() {

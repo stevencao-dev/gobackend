@@ -1,3 +1,3 @@
-module github.com/stevencao-dev/gobackend
+module github.com/stevencao-dev/indie-store-backend
 
 go 1.25.3
